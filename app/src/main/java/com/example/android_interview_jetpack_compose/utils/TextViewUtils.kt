@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -112,4 +113,19 @@ fun TextSelectionMethod() {
             Text(text = "Hello World")
         }
     }
+}
+@OptIn(ExperimentalMaterialApi::class)
+@Composable
+fun TextSelectionView() {
+    Column {
+        ExpandableCard(
+            title = "My Title",
+            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " +
+                    "sed do eiusmod tempor incididunt ut labore et dolore magna " +
+                    "aliqua. Ut enim ad minim veniam, quis nostrud exercitation " +
+                    "ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        )
+        TextFiledView()
+    }
+
 }
